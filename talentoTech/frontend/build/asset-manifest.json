@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.76e04d60.css",
+    "main.js": "/static/js/main.fdf13b3a.js",
+    "static/js/453.726da21f.chunk.js": "/static/js/453.726da21f.chunk.js",
+    "static/media/logo_talento.png": "/static/media/logo_talento.baba1adee590f63e1929.png",
+    "index.html": "/index.html",
+    "main.76e04d60.css.map": "/static/css/main.76e04d60.css.map",
+    "main.fdf13b3a.js.map": "/static/js/main.fdf13b3a.js.map",
+    "453.726da21f.chunk.js.map": "/static/js/453.726da21f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76e04d60.css",
+    "static/js/main.fdf13b3a.js"
+  ]
+}

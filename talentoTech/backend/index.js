@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: 'https://talentotech-final-project-1jn60hwx3-s-diaz05s-projects.vercel.app',
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
   }
 });
@@ -22,7 +22,7 @@ const routerActividades = require('./routerActividades');
 
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'https://talentotech-final-project-1jn60hwx3-s-diaz05s-projects.vercel.app',
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: 'Content-Type',
 }));

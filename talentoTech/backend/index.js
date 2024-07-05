@@ -6,12 +6,13 @@ const socketIo = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server, {
-  cors: {
-    origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
-  }
-});
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: 'Content-Type',
+};
+
+
 
 const routerModulo = require('./routerModulo');
 const routerBootcamp = require('./routerBootcamp');
@@ -21,12 +22,7 @@ const routerSesiones = require('./routerSesiones');
 const routerActividades = require('./routerActividades');
 
 app.use(bodyParser.json());
-app.use(cors({
-  origin: '*',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: 'Content-Type',
-}));
-
+app.use(cors(corsOptions));
 app.use('/', (req, res) => {
   res.send("Server corriendo")
 })

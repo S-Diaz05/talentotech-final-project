@@ -43,5 +43,5 @@
   "devDependencies": {
     "tailwindcss": "^3.4.4"
   },
-  "proxy": "https://talentotech-final-project-server.vercel.app/"
+  "proxy": "https://talentotech-final-project-server-99aujozi3-s-diaz05s-projects.vercel.app/"
 }

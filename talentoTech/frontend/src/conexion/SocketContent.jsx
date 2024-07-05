@@ -12,7 +12,7 @@ export const SocketProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    const newSocket = io('http://localhost:3001');
+    const newSocket = io('https://talentotech-final-project-server.vercel.app/');
     setSocket(newSocket);
 
     return () => {

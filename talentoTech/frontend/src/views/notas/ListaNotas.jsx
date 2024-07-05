@@ -7,7 +7,7 @@ export default function ListaNotas() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/api/modulos/nombres')
+    axios.get('https://talentotech-final-project-server.vercel.app/api/modulos/nombres')
       .then(response => {
         setData(response.data);
       })

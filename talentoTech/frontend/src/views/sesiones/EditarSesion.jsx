@@ -19,7 +19,7 @@ const EditarSesion = () => {
 
   useEffect(() => {
     if (!location.state) {
-      axios.get(`http://localhost:3001/api/sesiones/getSesion/${id_sesion}`)
+      axios.get(`https://talentotech-final-project-server.vercel.app/api/sesiones/getSesion/${id_sesion}`)
         .then(response => {
           const sesion = response.data.find(s => s.id === parseInt(id_sesion));
           if (sesion) {
@@ -46,7 +46,7 @@ const EditarSesion = () => {
     };
 
     try {
-      const response = await fetch(`http://localhost:3001/api/sesiones/${sessionID}`, {
+      const response = await fetch(`https://talentotech-final-project-server.vercel.app/api/sesiones/${sessionID}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

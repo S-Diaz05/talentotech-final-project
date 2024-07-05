@@ -3,14 +3,14 @@ import React from 'react';
 const Actividades = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Agrega aquí la lógica para manejar el envío del formulario
+
   };
 
   return (
     <div className="container">
       <h1>Gestión de Actividades</h1>
 
-      {/* Sección para estudiantes */}
+      {}
       <div id="student-section">
         <h2>Mis Actividades</h2>
         <form id="upload-activity-form" action="/activities/upload" method="POST" encType="multipart/form-data" onSubmit={handleSubmit}>

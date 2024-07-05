@@ -12,7 +12,7 @@ const NuevaSesion = () => {
 
   const handleSave = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/sesiones', {
+      const response = await fetch('https://talentotech-final-project-server.vercel.app/api/sesiones', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

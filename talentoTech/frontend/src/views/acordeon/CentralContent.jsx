@@ -13,7 +13,7 @@ export default function CentralContent() {
     useEffect(() => {
         const fetchModulos = async () => {
             try {
-                const response = await axios.get(`http://localhost:3001/api/bootcamps/modulos/${id}`);
+                const response = await axios.get(`https://talentotech-final-project-server.vercel.app/api/bootcamps/modulos/${id}`);
                 console.log(response)
                 const modulos = response.data.map(modulo => ({
                     id_modulo: modulo.id_modulo,

@@ -10,7 +10,7 @@ export default function Sesion() {
   const [nombreModulo, setNombreModulo] = useState('');
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/api/sesiones/${id_modulo}`)
+    axios.get(`https://talentotech-final-project-server.vercel.app/api/sesiones/${id_modulo}`)
       .then(response => {
         setSesiones(response.data);
         if (response.data.length > 0) {

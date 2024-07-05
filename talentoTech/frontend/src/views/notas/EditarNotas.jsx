@@ -10,7 +10,7 @@ export default function EditarNota() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/api/notas/${usuario_id}`)
+    axios.get(`https://talentotech-final-project-server.vercel.app/api/notas/${usuario_id}`)
       .then(response => {
         setNotas(response.data);
         if (response.data.length > 0) {
@@ -44,7 +44,7 @@ export default function EditarNota() {
 
     console.log('Datos a enviar:', dataToSend);
 
-    axios.put(`http://localhost:3001/api/notas/${usuario_id}`, dataToSend, {
+    axios.put(`https://talentotech-final-project-server.vercel.app/api/notas/${usuario_id}`, dataToSend, {
       headers: {
         'Content-Type': 'application/json'
       }

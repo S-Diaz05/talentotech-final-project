@@ -18,7 +18,7 @@ console.log(id)
     }
 
     try {
-      const response = await fetch('http://localhost:3001/api/modulos', {
+      const response = await fetch('https://talentotech-final-project-server.vercel.app/api/modulos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

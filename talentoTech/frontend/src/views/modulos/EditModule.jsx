@@ -31,7 +31,7 @@ const EditModule = () => {
     };
     console.log(formData);
     try {
-      const response = await fetch(`http://localhost:3001/api/modulos/${id}`, {
+      const response = await fetch(`https://talentotech-final-project-server.vercel.app/api/modulos/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

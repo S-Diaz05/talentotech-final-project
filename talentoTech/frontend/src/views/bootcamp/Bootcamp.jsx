@@ -12,7 +12,7 @@ const Bootcamps = () => {
     useEffect(() => {
         const fetchBootcamps = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/api/bootcamps');
+                const response = await axios.get('https://talentotech-final-project-server.vercel.app/api/bootcamps');
                 const bootcamps = response.data.map(bootcamp => ({
                     id_bootcamp: bootcamp.id,
                     nombre: bootcamp.nombre,

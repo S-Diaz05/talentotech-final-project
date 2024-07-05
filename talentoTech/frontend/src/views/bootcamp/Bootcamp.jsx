@@ -8,7 +8,7 @@ import Logo from '../../img/logo_talento.png';
 const Bootcamps = () => {
 
     const [cardData, setCardData] = useState([]);
-
+    console.log("bootcamp")
     useEffect(() => {
         const fetchBootcamps = async () => {
             try {

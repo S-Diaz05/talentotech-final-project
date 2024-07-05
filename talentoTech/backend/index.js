@@ -27,6 +27,10 @@ app.use(cors({
   allowedHeaders: 'Content-Type',
 }));
 
+app.use('/', (req, res) => {
+  res.send("Server corriendo")
+})
+
 app.use('/api/modulos', routerModulo);
 app.use('/api/bootcamps', routerBootcamp);
 app.use('/api/notas', routerNotas)

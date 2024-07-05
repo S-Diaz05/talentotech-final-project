@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: 'https://talentotech-final-project-1jn60hwx3-s-diaz05s-projects.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
   }
 });
@@ -22,7 +22,7 @@ const routerActividades = require('./routerActividades');
 
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://talentotech-final-project-1jn60hwx3-s-diaz05s-projects.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: 'Content-Type',
 }));
@@ -33,12 +33,12 @@ app.use('/', (req, res) => {
 
 app.use('/api/modulos', routerModulo);
 app.use('/api/bootcamps', routerBootcamp);
-app.use('/api/notas', routerNotas)
-app.use('/api/usuarios', routerUsuario)
-app.use('/api/sesiones', routerSesiones)
-app.use('/api/actividades', routerActividades)
+app.use('/api/notas', routerNotas);
+app.use('/api/usuarios', routerUsuario);
+app.use('/api/sesiones', routerSesiones);
+app.use('/api/actividades', routerActividades);
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
